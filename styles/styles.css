@@ -115,19 +115,16 @@
     margin-top: 20px;
     background: #E93656;
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.more-information-container{
+.information-container{
+    margin-top: 135px;
     max-width: 1200px;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
 .about{
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .card {
     text-align: right;
@@ -200,13 +197,15 @@
     background: #E93656;
     transition: width 1.5s ease-in-out;
 }
-//////////////////////////////////////////////////////////////////////////
+.percentage-color{
+    color: #E93656;
+    margin-left: 15px;
+}
 
 .social-links {
     margin-top: 78px;
     display: flex;
     gap: 5px;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
 }
