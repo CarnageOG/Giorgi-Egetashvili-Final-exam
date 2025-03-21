@@ -108,10 +108,123 @@
     color: #E93656;
     margin-right: 5px;
 }
-.bar {
+.line {
     width: 340px;
     height: 6px;
     background-color: #E93656;
     margin-top: 20px;
     background: #E93656;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.more-information-container{
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    text-align: right;
+    width: 334px;
+    height: 369px;
+}
+.name {
+    margin-top: 83px;
+    font-size: 40pxpx;
+    color: #222222;
+}
+.subtitle {
+    color: #DAAE19;
+    font-size: 14px;
+    margin-top: 6px;
+}
+.description {
+    font-size: 15px;
+    color: #555555;
+    margin-top: 33px;
+}
+.btn {
+    display: inline-block;
+    background-color: #E93656;
+    color: #FFFFFF;
+    margin-top: 60px;
+    padding-top: 13px;
+    padding-right: 46px;
+    padding-bottom: 17px;
+    padding-left: 54px;
+    text-decoration: none;
+    font-size: 15px;
+}
+.btn:hover {
+    background-color: #555555;
+}
+
+.photo{
+    width: 430px;
+    height: 603px;
+    margin-left: 65.55px;
+    margin-right: 70px;
+}
+
+.bar-social{
+    display: flex;
+    flex-direction: column;
+}
+.abilities {
+    margin-top: 59px;
+}
+.skill {
+    margin-bottom: 23px;
+}
+.skill-title {
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 15px;
+}
+.progress-bar {
+    width: 256px;
+    background: #F0F0F0;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    width: 0;
+    background: #E93656;
+    transition: width 1.5s ease-in-out;
+}
+//////////////////////////////////////////////////////////////////////////
+
+.social-links {
+    margin-top: 78px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.social-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F9F9;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.icon {
+    width: 20px;
+    height: 20px;
+}
+.social-button:hover {
+    background-color: #15263E;
 }
