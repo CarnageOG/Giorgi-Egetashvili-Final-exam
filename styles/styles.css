@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*.slider-container{
+.slider-container{
     position: relative;
     height: 972px;
     width: 1920px;
@@ -226,15 +226,7 @@
 }
 .social-button:hover {
     background-color: #15263E;
-}*/
-
-
-
-
-
-
-
-
+}
 
 .contact-background{
     background-color: #131A36;
@@ -385,4 +377,64 @@
     text-decoration: none;
     color: #DFDFDF;
     font-size: 14px;
+}
+
+.services{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.div-services {
+    width: 285px;
+    width: 100%;
+    height: 360px;
+    background-color: #FAFAFA;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.img-services {
+    margin-top: 134px;
+    width: 60px;
+    height: 60px;
+}
+.h2-services {
+    font-size: 22px;
+    margin-top: 16px;
+    color: #222222;
+}
+.hover-services {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #15263E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.h3-hover {
+    color: #FFFFFF;
+    padding-top: 130px;
+    font-size: 22px;
+}
+.p-hover {
+    color: #ECECEC;
+    font-size: 14px;
+    text-align: center;
+    padding-left: 32px;
+    padding-right: 31px;
+    padding-bottom: 111px;
+    padding-top: 19px;
+    letter-spacing: 0.42px;
+}
+.div-services:hover .hover-services {
+    opacity: 1;
 }
