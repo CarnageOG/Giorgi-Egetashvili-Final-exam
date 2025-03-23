@@ -117,9 +117,6 @@
 }
 
 .information-container{
-    margin-top: 135px;
-    max-width: 1200px;
-    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -233,10 +230,6 @@
     height: 210px;
 }
 .contact-container{
-    max-width: 1060px;
-    width: 100%;
-    padding-left: 74px;
-    padding-right: 5px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -388,13 +381,13 @@
 
 .div-services {
     width: 285px;
-    width: 100%;
     height: 360px;
     background-color: #FAFAFA;
     text-align: center;
     transition: background 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .img-services {
     margin-top: 134px;
@@ -428,13 +421,87 @@
 .p-hover {
     color: #ECECEC;
     font-size: 14px;
-    text-align: center;
     padding-left: 32px;
     padding-right: 31px;
     padding-bottom: 111px;
     padding-top: 19px;
     letter-spacing: 0.42px;
+    text-align: center;
 }
 .div-services:hover .hover-services {
+    opacity: 1;
+}
+
+.div-headline{
+    text-align: center;
+}
+.p-NE{
+    font-size: 14px;
+    color: #2ED279;
+}
+.h3-team{
+    font-size: 70px;
+    color: #262526;
+}
+.Rosa-Team-container{
+
+}
+.clients{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+}
+.div-rosa {
+    position: relative;
+    width: 230px;
+    height: 190px;
+    overflow: hidden;
+    cursor: pointer;
+}
+ 
+.img-design {
+    width: 110px;
+    height: 110px;
+    transition: opacity 0.3s ease-in-out;
+    margin: 40px 60px;
+}
+
+.hover-client {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #E93656;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.h4-client{
+    color: #161616;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    padding-top: 44px;
+}
+.p-client{
+    color: #626262;
+    font-size: 13px;
+    letter-spacing: 0.39px;
+    padding-top: 15px;
+    padding-right: 33px;
+    padding-bottom: 44px;
+    padding-left: 32px;
+    text-align: center;
+}
+
+.div-rosa:hover .img-design {
+    opacity: 0;
+}
+
+.div-rosa:hover .hover-client {
     opacity: 1;
 }
