@@ -223,7 +223,7 @@
 }
 .social-button:hover {
     background-color: #15263E;
-}*/
+}
 
 .contact-background{
     background-color: #131A36;
@@ -379,7 +379,7 @@
     color: #DFDFDF;
     font-size: 14px;
 }
-/*
+
 .services{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -438,26 +438,35 @@
 }
 .div-services:hover .hover-services {
     opacity: 1;
-}
+}*/
 
 .div-headline{
     text-align: center;
+    margin-bottom: 81px;
 }
 .p-NE{
     font-size: 14px;
     color: #2ED279;
+    padding-left: 65px;
+    transform: translatey(10px);
 }
 .h3-team{
     font-size: 70px;
     color: #262526;
 }
+
+
 .Rosa-Team-container{
+    max-width: 940px;
+    width: 100%;
+    padding-left: 30px;
+    margin: 0 auto;
 
 }
 .clients{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 5px;
+  gap: 5px;
 }
 .div-rosa {
     position: relative;
@@ -512,4 +521,4 @@
 
 .div-rosa:hover .hover-client {
     opacity: 1;
-}*/
+}
