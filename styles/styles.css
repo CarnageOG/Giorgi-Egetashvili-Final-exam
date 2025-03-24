@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-/*.slider-container{
+}/*
+.slider-container{
     position: relative;
     height: 972px;
     width: 1920px;
@@ -378,8 +378,13 @@
     text-decoration: none;
     color: #DFDFDF;
     font-size: 14px;
+}*/
+.services-container{
+    max-width: 1190px;
+    width: 100%;
+    padding-left: 20px;
+    margin: 0 auto;
 }
-
 .services{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -438,7 +443,7 @@
 }
 .div-services:hover .hover-services {
     opacity: 1;
-}*/
+}
 
 .div-headline{
     text-align: center;
@@ -455,7 +460,7 @@
     color: #262526;
 }
 
-
+/*
 .Rosa-Team-container{
     max-width: 940px;
     width: 100%;
@@ -521,4 +526,4 @@
 
 .div-rosa:hover .hover-client {
     opacity: 1;
-}
+}*/
