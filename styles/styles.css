@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.slider-container{
+/*.slider-container{
     position: relative;
     height: 972px;
     width: 1920px;
@@ -223,22 +223,30 @@
 }
 .social-button:hover {
     background-color: #15263E;
-}
+}*/
 
 .contact-background{
     background-color: #131A36;
     height: 210px;
+
 }
 .contact-container{
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 35px;
     display: flex;
     flex-direction: row;
     gap: 40px;
+    align-items: center;
 }
 .phone{
     display: flex;
     flex-direction: row;
     gap: 29px;
     align-items: center;
+    margin-top: 54px;
+    margin-bottom: 60px;
 }
 .phone-link {
     display: inline-block;
@@ -371,7 +379,7 @@
     color: #DFDFDF;
     font-size: 14px;
 }
-
+/*
 .services{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -504,4 +512,4 @@
 
 .div-rosa:hover .hover-client {
     opacity: 1;
-}
+}*/
