@@ -1,4 +1,4 @@
-///.1.////////////////////////////////////////////////////////////////////
+///სლაიდერი/////////////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function() {
     let images = ["images/1.PNG", "images/2.PNG", "images/3.PNG"];
     let index = 0;
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector(".background-img").src = images[index];
     }, 5000);
 });
-///.2.////////////////////////////////////////////////////////////////////
+///მეტი ინფორმაცია თქვენზე////////////////////////////////////////////////////////////////////
         function fillProgressBars() {
             const progressBars = document.querySelectorAll('.progress');
             progressBars.forEach(bar => {
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.addEventListener('scroll', fillProgressBars);
         window.addEventListener('load', fillProgressBars);;
-//////////////////////////////////////////////////////////////////////////
+///რეკომენდაციები//////////////////////////////////////////////////////////////////////////////
 const slides = [
     {
         text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
@@ -43,7 +43,6 @@ const slides = [
         profession: "Standartenführer"
     }
 ];
-
 let currentSlide = 0;
 
 function updateSlide() {
@@ -56,12 +55,51 @@ function updateSlide() {
         button.style.borderColor = index === currentSlide ? "#E93656" : "white";
     });
 }
-
 document.querySelectorAll(".button").forEach((button, index) => {
     button.addEventListener("click", () => {
         currentSlide = index;
         updateSlide();
     });
 });
-
 updateSlide();
+/ბოლო პროექტები//////////////////////////////////////////////////////////////////////////////
+document.addEventListener("DOMContentLoaded", function () {
+    const filters = document.querySelectorAll(".a-filter");
+    const projects = document.querySelectorAll(".div-project");
+    const cardContainer = document.querySelector(".card-projects");
+
+    const categoryMap = {
+        "work ideas": "word ideas design",
+        "mockup": "3d mockup design",
+        "psd design": "psd design",
+        "logo": "3d logo",
+        "presentation": "3d presentation",
+        "icons": "3d icon"
+    };
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            
+            const category = this.textContent.trim().toLowerCase();
+            let firstVisible = null;
+            
+            projects.forEach(project => {
+                const projectTitle = project.querySelector(".h4-hover-LP").textContent.trim().toLowerCase();
+                
+                if (category === "all" || projectTitle === categoryMap[category]) {
+                    project.style.display = "block";
+                    if (!firstVisible) {
+                        firstVisible = project;
+                    }
+                } else {
+                    project.style.display = "none";
+                }
+            });
+            
+            if (firstVisible) {
+                cardContainer.prepend(firstVisible);
+            }
+        });
+    });
+});
