@@ -741,11 +741,11 @@
     width: 100%;
     margin: 0 auto;
     height: 570px;
+    position: relative;
 }
 .recommendations-img{
     width: 100%;
     height: 100%;
-    position: relative;
 }
 .div-recommendation1{
     display: flex;
