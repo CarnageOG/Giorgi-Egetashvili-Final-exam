@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         window.addEventListener('scroll', fillProgressBars);
         window.addEventListener('load', fillProgressBars);;
+
 ///რეკომენდაციები//////////////////////////////////////////////////////////////////////////////
 const slides = [
     {
@@ -62,7 +63,8 @@ document.querySelectorAll(".button").forEach((button, index) => {
     });
 });
 updateSlide();
-/ბოლო პროექტები//////////////////////////////////////////////////////////////////////////////
+
+///ბოლო პროექტები//////////////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll(".a-filter");
     const projects = document.querySelectorAll(".div-project");
@@ -103,3 +105,26 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+///ფუტერი//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const website = document.getElementById('website').value;
+            const message = document.getElementById('message').value;
+            
+            fetch('https://borjomi.loremipsum.ge/api/send-message', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, website, message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 1) {
+                    document.getElementById('modal').style.display = 'block';
+                    setTimeout(() => document.getElementById('modal').style.display = 'none', 3000);
+                }
+            });
+        });
