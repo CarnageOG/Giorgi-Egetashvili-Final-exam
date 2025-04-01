@@ -7,6 +7,7 @@
     position: relative;
     height: 972px;
     max-width: 1920px;
+    width: 100%;
     margin: 0 auto;
 }
 .background-img{
@@ -22,8 +23,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 113px;
-    height: 56px;
 }
 .logo{
     font-size: 40px;
@@ -43,7 +42,7 @@
     height: 221px;
     position: absolute;
     top: 25px;
-    right: 118.89px;
+    right: 119px;
 }
 .number{
     font-size: 158.3px;
@@ -54,8 +53,8 @@
     width: 227px;
     height: 60px;
     position: absolute;
-    top: 106.36px;
-    right: 81.68px;
+    top: 106px;
+    right: 82px;
 }
 .AM{
     font-size: 43.17px;
@@ -63,11 +62,11 @@
     color: #373737;
 }
 .content{
-   position: absolute;
-   width: 443px;
-   height: 292px;
-   right: 308px;
-   top: 384px;
+    position: absolute;
+    width: 582px;
+    height: 292px;
+    right: 308px;
+    top: 384px;
 }
 .Hi{
     font-size: 49.7px;
@@ -117,9 +116,8 @@
     height: 6px;
     background-color: #E93656;
     margin-top: 20px;
-    background: #E93656;
+    border-radius: 50px;
 }
-
 
 
 
@@ -129,7 +127,7 @@
     max-width: 1210px;
     width: 100%;
     padding-right: 10px;
-    margin: 0 auto;
+    margin: 135px auto 100px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -242,8 +240,8 @@
 .contact-background{
     background-color: #131A36;
     height: 210px;
-
 }
+
 .contact-container{
     max-width: 1050px;
     width: 100%;
@@ -397,7 +395,7 @@
     max-width: 1190px;
     width: 100%;
     padding-left: 20px;
-    margin: 0 auto;
+    margin: 203px auto 160px auto;
 }
 .services{
   display: grid;
@@ -461,10 +459,13 @@
 
 .div-Latest-Articles-title{
     text-align: center;
+    margin-top: 180px;
     margin-right: 25px;
+    margin-bottom: 79px;
 }
 .div-Rosa-Team-title{
     text-align: center;
+    margin-bottom: 81px;
 }
 .p-NE-Latest-Articles{
     font-size: 14px;
@@ -488,8 +489,7 @@
 .Rosa-Team-container{
     max-width: 940px;
     width: 100%;
-    padding-left: 30px;
-    margin: 0 auto;
+    margin: 175px auto 155px auto;
 
 }
 .clients{
@@ -504,14 +504,13 @@
     overflow: hidden;
     cursor: pointer;
 }
- 
+
 .img-design {
     width: 110px;
     height: 110px;
     transition: opacity 0.3s ease-in-out;
     margin: 40px 60px;
 }
-
 .hover-client {
     position: absolute;
     top: 0;
@@ -543,14 +542,13 @@
     padding-left: 32px;
     text-align: center;
 }
-
 .div-rosa:hover .img-design {
     opacity: 0;
 }
-
 .div-rosa:hover .hover-client {
     opacity: 1;
 }
+
 .Latest-Articles-container{
     max-width: 1920px;
     width: 100%;
@@ -743,7 +741,7 @@
 .recommendations-container{
     max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 144px auto;
     height: 570px;
     position: relative;
 }
@@ -824,6 +822,7 @@
 .h2-Latest-Projects{
     color: #2E2E2E;
     font-size: 70px;
+    margin-bottom: 55px;
     text-align: center;
 }
 .Latest-Projects-grid{
@@ -950,7 +949,6 @@
     position: absolute;
     top: 152px;
     right: 745px;
-    left: 740px;
     width: 435px;
 }
 .h5-contact{
@@ -971,7 +969,6 @@
     width: 900px;
     position: absolute;
     top: 290px;
-    left: 510px;
     right: 510px;
 }
 form{
@@ -1016,7 +1013,6 @@ input {
 .footer-button {
     position: absolute;
     top: 490px;
-    left: 866px;
     right: 867px;
     background: transparent;
     font-size: 12px;

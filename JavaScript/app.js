@@ -65,46 +65,7 @@ document.querySelectorAll(".button").forEach((button, index) => {
 updateSlide();
 
 ///ბოლო პროექტები//////////////////////////////////////////////////////////////////////////////
-document.addEventListener("DOMContentLoaded", function () {
-    const filters = document.querySelectorAll(".a-filter");
-    const projects = document.querySelectorAll(".div-project");
-    const cardContainer = document.querySelector(".card-projects");
 
-    const categoryMap = {
-        "work ideas": "word ideas design",
-        "mockup": "3d mockup design",
-        "psd design": "psd design",
-        "logo": "3d logo",
-        "presentation": "3d presentation",
-        "icons": "3d icon"
-    };
-
-    filters.forEach(filter => {
-        filter.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default link behavior
-            
-            const category = this.textContent.trim().toLowerCase();
-            let firstVisible = null;
-            
-            projects.forEach(project => {
-                const projectTitle = project.querySelector(".h4-hover-LP").textContent.trim().toLowerCase();
-                
-                if (category === "all" || projectTitle === categoryMap[category]) {
-                    project.style.display = "block";
-                    if (!firstVisible) {
-                        firstVisible = project;
-                    }
-                } else {
-                    project.style.display = "none";
-                }
-            });
-            
-            if (firstVisible) {
-                cardContainer.prepend(firstVisible);
-            }
-        });
-    });
-});
 ///ფუტერი//////////////////////////////////////////////////////////////////////////////////////////////////////
 
         document.getElementById('contactForm').addEventListener('submit', function(event) {
