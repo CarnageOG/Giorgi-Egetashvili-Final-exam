@@ -66,6 +66,54 @@ updateSlide();
 
 ///ბოლო პროექტები//////////////////////////////////////////////////////////////////////////////
 
+document.addEventListener("DOMContentLoaded", function () {
+    const filters = document.querySelectorAll(".a-filter");
+    const projects = Array.from(document.querySelectorAll(".div-project"));
+    const cardContainer = document.querySelector(".card-projects");
+    const defaultOrder = [...projects];
+
+    const categoryMap = {
+        "work ideas": "word ideas design",
+        "mockup": "3d mockup design",
+        "psd design": "psd design",
+        "logo": "3d logo",
+        "presentation": "3d presentation",
+        "icons": "3d icon"
+    };
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function (event) {
+            event.preventDefault(); 
+            
+            const category = this.textContent.trim().toLowerCase();
+            
+            if (category === "all") {
+                cardContainer.innerHTML = "";
+                defaultOrder.forEach(project => {
+                    project.style.display = "block";
+                    cardContainer.appendChild(project);
+                });
+            } else {
+                const filteredProjects = [];
+                
+                projects.forEach(project => {
+                    const projectTitle = project.querySelector(".h4-hover-LP").textContent.trim().toLowerCase();
+                    
+                    if (projectTitle === categoryMap[category]) {
+                        project.style.display = "block";
+                        filteredProjects.push(project);
+                    } else {
+                        project.style.display = "none";
+                    }
+                });
+                
+                cardContainer.innerHTML = "";
+                filteredProjects.forEach(project => cardContainer.appendChild(project));
+            }
+        });
+    });
+});
+
 ///ფუტერი//////////////////////////////////////////////////////////////////////////////////////////////////////
 
         document.getElementById('contactForm').addEventListener('submit', function(event) {
