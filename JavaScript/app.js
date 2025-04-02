@@ -122,24 +122,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 ///ფუტერი//////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const website = document.getElementById('website').value;
-            const message = document.getElementById('message').value;
-            
-            fetch('https://borjomi.loremipsum.ge/api/send-message', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ name, email, website, message })
-            })
-            .then(response => response.json())
-            .then(data => {
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const button = document.querySelector(".footer-button");
+    const modal = document.getElementById("modal");
+
+    button.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const website = document.getElementById("website").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+            alert("Please fill in all required fields.");
+            return;
+        }
+
+        fetch("https://borjomi.loremipsum.ge/api/send-message", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, website, message }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
                 if (data.status === 1) {
-                    document.getElementById('modal').style.display = 'block';
-                    setTimeout(() => document.getElementById('modal').style.display = 'none', 3000);
+                    modal.style.display = "block";
+                    setTimeout(() => {
+                        modal.style.display = "none";
+                        form.reset();
+                    }, 3000);
+                } else {
+                    alert("Message sending failed. Please try again.");
                 }
+            })
+            .catch(() => {
+                alert("An error occurred. Please check your connection and try again.");
             });
-        });
+    });
+});
