@@ -231,14 +231,12 @@
     font-size: 49.7px;
     color: #212121;
     letter-spacing: 0.75px;
-    margin-bottom: 10px;
     font-family: 'Glacial-Indifference-Regular';
 }
 .Me{
     font-size: 71px;
     color: #212121;
     letter-spacing: 1.06px;
-    margin-bottom: 10px;
     font-family: 'Glacial-Indifference-Bold';
 }
 .Who-I-am{
@@ -380,7 +378,7 @@
 }
 
 .social-links {
-    margin-top: 78px;
+    margin-top: 58px;
     display: flex;
     gap: 5px;
     align-items: center;
