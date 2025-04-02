@@ -84,6 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
     filters.forEach(filter => {
         filter.addEventListener("click", function (event) {
             event.preventDefault(); 
+
+            // Reset all filters to default color
+            filters.forEach(f => f.style.color = "#FFFFFF");
+
+            // Change the clicked filter color to #E93656
+            this.style.color = "#E93656";
             
             const category = this.textContent.trim().toLowerCase();
             
