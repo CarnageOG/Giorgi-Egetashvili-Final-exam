@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 const slides = [
     {
         text: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore..",
-        image: "images/mau.png",
+        image: "images/MAU.PNG",
         name: "Mau Thomas",
         profession: "Graphic Designer"
     },
